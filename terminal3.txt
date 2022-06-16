@@ -1,0 +1,83 @@
+
+1. Сделать папку dir_1 - mkdir dir_1
+
+2. Зайти в папку dir_1 - cd dir_1
+
+3. Создать папку inner_dir_1 - mkdir inner_dir_1
+
+4. Посмотреть где ты находишься - pwd
+
+5. Находясь в dir_1 создать пустой файл tf_1.txt - touch tf_1.txt
+
+6. Находясь в dir_1 созд через cat tf_2.txt со строчками the first 1, the second 2, the third 3 - cat > tf_2.txt the 
+                                                                                                  first 1 b
+                                                                                                  the second 2 
+                                                                                                  the third 3
+
+7. Зайти в папку inner_dir_1 - cd inner_dir_1
+
+8. Через cat сделать файл tf_3.txt - cat > tf_3.txt
+
+9. Через cat добавить в tf_3.txt строку "the second 2" - cat >> tf_3.txt 
+
+10. Через cat добавить в tf_3.txt строку "the sec 2" - cat >> tf_3.txt 
+
+11. Через cat добавить в tf_2.txt строку "the sec 3" - cat >> ../tf_2.txt 
+
+12. Через cat добавить в tf_3.txt строку "the SeCoNd 2" - cat >> tf_3.txt 
+
+13. Через cat добавить в tf_2.txt строку "the seСonD 2" - cat >> ../tf_2.txt
+
+14. Сделать текст файл tf_4.txt c 15 строками - cat > tf_4.txt
+
+15. Сделать текст файл tF_5.txt c 13 строками - cat > tF_5.txt
+
+16. Вывести список всех файлов в папке - ls -la
+
+17. Выйти из папки inner_dir_1 - cd ..
+
+18. Вывести содержимое tf_3.txt - cat inner_dir_1/tf_3.txt
+
+19. Найти путь к tf_4.txt - find . tf_4.txt
+
+20. Отчистить tf_4.txt без удаления - echo > inner_dir_1/tf_4.txt
+
+21. Найти путь к файлам у которых есть tf - find -name "*tf*"     (если нужен файл который начинается с tf тогда маска "tf*")
+
+22. Найти путь к файлам у которых есть tf в любом регистре - find -iname "*tf*"
+
+23. Найти строки c комбинацией "sec" в текущ папке - grep sec *
+
+24. Найти строки c комбинацией "sec" в любом регистре - grep -i sec *
+
+25. Найти строки только комб "sec" в текущ папке - grep -x sec *
+
+26. Найти строки в файлах где есть комб "sec" в любом регистре - grep -x -i sec *     (можно -xi)
+
+27. Найти строки c комбинацией "second" в текущ папке - grep second * 
+
+28. Найти строки в файлах где есть комб "second" в любом регистре - grep -i second *
+
+29. Найти строки в файлах где есть комб "second" во всех папках ниже уровнем - grep -R */
+
+30. Найти только путь и название файлов где есть "second" - grep -I second *
+
+31. Найти все строки где нет комб "second" - grep -v second *
+
+32. Найти название и путь к файлам где нет "second" - grep -L second *
+
+33. Вывести в теримнал посл 4 строки любого файла - tail -n4 tf_2.txt
+
+34. Вывести в теримнал перв 4 строки любого файла - head -n4 tf_2.txt
+
+35. В одну строку создать папку, созд тест с содержимым - mkdir 1; cd 1; cat > 1.txt   (mkdir 1; echo "1224" > 2/2.txt)
+
+36. В одну строку переместить в одну папку текст файлы где есть "sec" - grep -l -w -r sec * | xargs mv -t new_dir   или   mv $(grep -l -w - r sec *) new_dir
+
+37. Скопировать в одну папку файлы где есть "sec" - grep -l -w -r sec * | xargs cp -t new_dir   или   cp $(grep -l -w - r sec *) new_dir
+
+38. Найти строки "sec", скопировать и вставить в новый файл - grep -r -h sec * > file.txt
+
+39. Удалить файлы где есть "sec" - grep -l -w -r sec * | xargs rm
+
+40. Выести строку "Good job!" - echo Good job!

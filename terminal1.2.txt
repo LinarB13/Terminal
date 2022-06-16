@@ -1,0 +1,32 @@
+
+1. Отправить http запрос на сервер - curl http://162.55.220.72:5005/terminal-hw-request  
+                                     curl http://162.55.220.72:5005/get_method?name=Linar\&age=34
+
+2. Написать скрипт: 
+
+а) создаем скрипт - nano bash_script.sh
+
+б) указываем - #!/bin/bash 
+
+в) прописываем команды - 
+
+cd hw_1
+mkdir S1
+mkdir S2
+mkdir S3
+cd S1
+touch FF1.txt
+touch FF2.txt
+touch FF3.txt
+touch J1.json
+touch J2.json
+mkdir S11
+mkdir S12
+mkdir S13
+ls -la
+cd .. mv S1/FF1.txt S2/FF1.txt
+cd .. mv S1/FF2.txt S2/FF2.txt
+
+г) сохраняем - ctrl O, далее enter
+д) выходим - ctrl X
+е) выполняем скрпит - bash bash_script.sh
